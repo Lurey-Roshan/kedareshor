@@ -1,0 +1,12 @@
+<div class="container" style="margin-left: 50px;" 	>
+	{% if form %}
+
+			<form action="" method="POST" enctype="multipart/form-data">
+				{{form.as_p}}
+				
+				{%csrf_token%}
+				<input type="submit" name="submit">
+			</form>
+
+	{% endif %}
+</div>

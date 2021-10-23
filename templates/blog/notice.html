@@ -1,0 +1,11 @@
+{% if notice %}
+<p>I am form notice</p>
+		{% for n in notice %}
+			<a href="{% url 'notice_detail' n.id %}">{{n.name}}</a>
+			<br>
+
+		{% endfor  %}
+
+{% else%}
+<p>No notices</p>
+{% endif%}

@@ -1,0 +1,7 @@
+{% if notice %}
+
+{{notice.name}}
+<img src="{{notice.pic.url}}">
+<a href="{% url 'edit_notice' notice.id%}">Edit</a>
+<a href="{% url 'delete_notice' notice.id%}">Delete</a>
+{% endif %}
